@@ -1,0 +1,74 @@
+<html>
+<head>
+          <title>Escola de condução AJR</title>
+          <meta charset="UTF-8"/>
+		  <link rel="stylesheet" type="text/css" href="estilocadastro.css"/>
+		  <script src="script.js"></script>
+												 
+												 <script>
+												 var slider = document.querySelector('.slider');
+												 var container = slider.querySelector('.slider-container');
+												 var total = 0;
+												 var origem = 0;
+												 slider.ontouchstart = function(e){
+												            origem = e.changedTouches[0].clientX;
+															console.log('origem ' + origem)
+															e.preventDefault();
+															};
+															
+												slider.ontouchmove = function(e){
+															console.log('move ' + e.changedTouches[0].clientX)
+															var delta = e.changedTouches[0].clientX - origem;
+															console.log('delta ' + delta)
+															container.style['-webkit-transform'] = 'translateX(' + (total + delta) + 'px)';
+															e.preventDefault();
+															};
+															
+															slider.ontouchend = function(e) {
+															total += e.changedTouches[0].clientX - origem;
+															console.log('end total ' + total)
+															e.preventDefault();
+															};
+													</script>
+	
+</head>
+<body>
+<center>
+<div class="cabecalho">
+<img src="log.png"/>
+
+<nav class="menu">
+
+<ul>
+<li><a href="escola.html">Página Inicial</a></li>
+<li><a href="cadastro.php">Realizar Matricula</a></li>
+<li><a href="cadastrar_funcionario.html">Cadastar Funcionarios</a></li>
+<li><a href="consultar_funcionario.html">Consultar Funcionarios</a></li>>
+<li><a href="aluno.html">Alunos</a></li>
+<li>Informações</li>
+
+
+</ul>
+<br>
+<br>
+
+
+
+<br>
+<form action="consulta.php" method="post">
+ <input class="campo" type="text" name="nome" size="35" placeholder="pesquisa funcionarios na base de dados"/> <button class="pesquisa"  type="submit">Pesquisar Aluno</button>
+ 
+ </form>
+</nav>
+<br>
+<br>
+
+
+
+<br>
+
+</div>
+
+</center>
+</body>
+</html>	

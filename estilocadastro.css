@@ -1,0 +1,190 @@
+body {
+   background-image: url("sinais1.jpg");
+   background-position: center;
+   
+   color: black;
+   font-weight: bold;
+  
+   }
+
+   
+   h1 {
+     font-family: Arial ;
+	 font-size: 2em;
+	 }
+	 h5 {
+            color: orange;
+			font-size: 1em;
+       }			
+   
+   input {
+     border-color: white;
+	 padding: .5em;
+	 background-color: white;
+	 color: black;
+	 font-weight: bold;
+	 
+	 }
+	ul {
+      display: block;
+     }
+    li {
+         display: inline-block;
+		 margin: 0;
+}		 
+
+button {
+    padding: .5em;
+	background-color: orange;
+	color: black;
+	border-color: orange;
+	}
+	
+.campo {
+         text-align: right;
+		 background-color: white;
+		 color: black;
+		 }
+		 
+.consulta {
+    float: right;
+	width: 30%;
+	height: 5%;
+
+	background-color: white;
+         }
+		 .consulta  button{
+		    margin: 1% 1% 1% 1%;
+			padding: 1%;
+			}
+		.consulta  input{	
+		  padding: .3.5%;
+		  margin: 0 0 0 1%;
+		  }
+
+.pesquisa {
+		 padding: .5em;
+	background-color: orange;
+	color: black;
+	border-color: orange;
+	}
+	
+	.xx {
+	      display: block;
+		  background-color: black;
+		  opacity: .8;
+		  color: white;
+		  }
+	.xx li {
+       display: inline-block;
+       margin: 2em;
+      }	 
+
+    .menu ul {  
+	        margin: 2% 0;
+	        display: block;
+	        background-color: black;
+			border-bottom: .4em solid red; 
+			width: 85%;
+            }
+
+     .menu li {
+           display: inline-block;
+           background-color: black;
+           color: white;		   
+		   margin: 1em;
+		   
+		   }
+		   
+	.cabecalho {
+       background-color: #F0F0F0;
+       width: 85%;
+	   height: 130%;
+	   opacity: .9;
+	  
+               }
+			   .cabecalho1 {
+       background-color: #F0F0F0;
+       width: 65%;
+	   height: 80%;
+	   opacity: .8;
+	   margin-top: 5em;
+	  
+               }
+
+    .cabecalho  h1{
+       text-align: left;
+	   margin-left: 8%;
+	   font-family: Radio, serif;
+               }
+
+  
+
+   .cabecalho button {
+     background-color: red;
+     color: white;
+	 border: red;
+	 }	 
+	 
+	 
+	  .cabecalho1 button {
+     background-color: black;
+     color: white;
+	 border: black;
+	 }
+	 
+	 * {
+      -moz-box-sizing: content-box;
+	  box-sizing: content-box;
+	  }
+	  
+	  .slider {
+	          overflow: hidden;
+			  height: 12em;
+			  max-width: 900px;
+			  width: 110%;
+			  
+			  
+			  
+			  
+			  }
+		.slider h1 {	  
+			  font-size: 2em;
+			  text-align: center;
+			  font-family: Arial, serif;
+			  color: black;
+			  }
+			  
+	   .slider-container {
+	          padding: 0 1em 0 1em;
+			  width: 70em;
+			  
+			              }
+		.slider-item {
+		      float: left;
+			  height: 8em;
+			  width: 9em;
+			  margin-right: 2em;
+			  }
+			  
+		.slider-item:nth-child(5n) { background-image: url("sinais1.jpg"); }
+		.slider-item:nth-child(5n+1) { background-image: url("sinais2.jpg"); }
+		.slider-item:nth-child(5n+2) { background-image: url("sinais3.jpg"); }
+		.slider-item:nth-child(5n+3) { background-image: url("sinais4.jpg"); }
+		.slider-item:nth-child(5n+4) { background-image: url("xx.jpg"); }																														
+		
+
+    .xc { 
+        display: block;
+        }
+    
+	.xc li {
+       display: inline-block;
+	   margin: 1%;
+         }	
+		 
+		 a {
+		  text-decoration: none;
+		  color: white;
+		  }
+		 

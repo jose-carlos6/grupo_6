@@ -1,0 +1,109 @@
+<html>
+<head>
+          <title>Escola de condução AJR</title>
+          <meta charset="UTF-8"/>
+		  <link rel="stylesheet" type="text/css" href="estilocadastro.css"/>
+		  <script src="script.js"></script>
+												 
+												 <script>
+												 var slider = document.querySelector('.slider');
+												 var container = slider.querySelector('.slider-container');
+												 var total = 0;
+												 var origem = 0;
+												 slider.ontouchstart = function(e){
+												            origem = e.changedTouches[0].clientX;
+															console.log('origem ' + origem)
+															e.preventDefault();
+															};
+															
+												slider.ontouchmove = function(e){
+															console.log('move ' + e.changedTouches[0].clientX)
+															var delta = e.changedTouches[0].clientX - origem;
+															console.log('delta ' + delta)
+															container.style['-webkit-transform'] = 'translateX(' + (total + delta) + 'px)';
+															e.preventDefault();
+															};
+															
+															slider.ontouchend = function(e) {
+															total += e.changedTouches[0].clientX - origem;
+															console.log('end total ' + total)
+															e.preventDefault();
+															};
+													</script>
+	
+</head>
+<body>
+<center>
+<div class="cabecalho">
+<img src="log.png"/>
+
+<nav class="menu">
+
+<ul>
+
+<li><a href="escola.html">Página Inicial</a></li>
+<li><a href="cadastro.php">Realizar Matricula</a></li>
+<li><a href="cadastrar_funcionario.html">Cadastar Funcionarios</a></li>
+<li><a href="consultar_funcionario.html">Consultar Funcionarios</a></li>
+<li><a href="aluno.html">Alunos</a></li>
+<li>Informações</li>
+
+
+</ul>
+
+</nav>
+
+
+
+
+<form enctype="multipart/form-data"   action="inserir_funcionarios.php" method="post">
+<ul class="xc">
+<li>
+<fieldset>
+<legend>Dados do Funcionario</legend>
+Nome: 
+<p><input type="text" name="nome" size="24" placeholder="Nome do Aluno"/><p>
+
+Data de Nascimento: 
+<p><input type="text" name="data_nascimento" size="24" placeholder="idade" /></p>
+
+Sexo: 
+<p><input type="text" name="sexo" size="24" maxlength="30" placeholder="sexo" /></p>
+
+BI:
+<p><input type="text" name="bi" size="24" maxlength="30" placeholder="naturalidade" /></p>
+
+Endereço: 
+<p><input type="text" name="endereco" size="24" placeholder="residencia"/></p>
+
+Contacto: 
+<p><input type="text" name="contacto" size="24" placeholder="residencia"/></p>
+
+Cargo: 
+<p><input type="text" name="cargo" size="24" placeholder="residencia"/></p>
+</fieldset>
+</li>
+<li>
+<fieldset>
+<legend>Documentos</legend>
+Fotografias (tipo pass):
+<p><input type="file" name="fotografia" size="30" placeholder="importar e anexar ficheiros"/></p>
+
+Declaração da escola/trabalho
+<p>ou certificado de habilitações literarias:</p>
+<p><input type="file" name="declaracao" size="30" placeholder="importar e anexar ficheiros"/></p>
+
+Recenseamento militar(opcional para masculinos):
+<p><input type="file" name="resenceamento" size="30" placeholder="importar e anexar ficheiros"/></p>
+</fieldset>
+</li>
+
+<br>
+<button  type="submit"> Codastrar dados </button>
+</form>
+</center>
+</div>
+
+
+</body>
+</html>	
